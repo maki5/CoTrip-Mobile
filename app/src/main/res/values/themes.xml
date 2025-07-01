@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.CoTrip" parent="Theme.Material3.DayNight">
-        <!-- Customize your light theme here. -->
+    <style name="Base.Theme.CoTrip" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary_blue</item>
-        <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorSecondary">@color/secondary_teal</item>
-        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorAccent">@color/secondary_teal</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
     </style>
 
     <style name="Theme.CoTrip" parent="Base.Theme.CoTrip" />

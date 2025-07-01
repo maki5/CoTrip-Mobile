@@ -1,19 +1,21 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("dagger.hilt.android.plugin")
+    // TODO: Re-enable Hilt once dependencies are fixed
+    // id("dagger.hilt.android.plugin")
     id("kotlinx-serialization")
-    kotlin("kapt")
+    // TODO: Re-enable kapt once needed
+    // kotlin("kapt")
 }
 
 android {
     namespace = "com.cotrip.mobile"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.cotrip.mobile"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -69,6 +71,7 @@ android {
 dependencies {
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
     implementation("androidx.activity:activity-compose:1.8.2")
     
@@ -86,10 +89,10 @@ dependencies {
     // ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
     
-    // Dependency Injection - Hilt
-    implementation("com.google.dagger:hilt-android:2.48")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    kapt("com.google.dagger:hilt-compiler:2.48")
+    // Dependency Injection - Hilt (temporarily disabled)
+    // implementation("com.google.dagger:hilt-android:2.48")
+    // implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    // kapt("com.google.dagger:hilt-compiler:2.48")
     
     // Networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -102,23 +105,23 @@ dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     
-    // Supabase
-    implementation("io.github.jan-tennert.supabase:postgrest-kt:2.0.4")
-    implementation("io.github.jan-tennert.supabase:gotrue-kt:2.0.4")
-    implementation("io.github.jan-tennert.supabase:realtime-kt:2.0.4")
-    implementation("io.github.jan-tennert.supabase:storage-kt:2.0.4")
-    implementation("io.ktor:ktor-client-android:2.3.7")
-    implementation("io.ktor:ktor-client-core:2.3.7")
-    implementation("io.ktor:ktor-utils:2.3.7")
+    // Supabase (temporarily disabled for initial build)
+    // implementation("io.github.jan-tennert.supabase:postgrest-kt:2.7.0")
+    // implementation("io.github.jan-tennert.supabase:gotrue-kt:2.7.0")
+    // implementation("io.github.jan-tennert.supabase:realtime-kt:2.7.0")
+    // implementation("io.github.jan-tennert.supabase:storage-kt:2.7.0")
+    // implementation("io.ktor:ktor-client-android:2.3.8")
+    // implementation("io.ktor:ktor-client-core:2.3.8")
+    // implementation("io.ktor:ktor-utils:2.3.8")
     
-    // Google Sign-In
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    // Google Sign-In (temporarily disabled)
+    // implementation("com.google.android.gms:play-services-auth:20.7.0")
     
-    // Image Loading
-    implementation("io.coil-kt:coil-compose:2.5.0")
+    // Image Loading (temporarily disabled)
+    // implementation("io.coil-kt:coil-compose:2.5.0")
     
-    // Date Picker
-    implementation("io.github.vanpra.compose-material-dialogs:datetime:0.9.0")
+    // Date Picker (temporarily disabled)
+    // implementation("io.github.vanpra.compose-material-dialogs:datetime:0.9.0")
     
     // Preferences DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
